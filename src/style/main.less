@@ -3,6 +3,10 @@ body, html {
     height: 100%;
 }
 
+.inline {
+    display: inline-block;
+}
+
 .background {
     height: 100%;
     background: url(../image/bg1.jpg) no-repeat;
@@ -18,12 +22,37 @@ body, html {
     overflow: hidden;
     .title-container {
         position: relative;
-        margin: 50px;
+        height: 260px;
+        .title-moon {
+            width: 260px;
+            height: 260px;
+            position: absolute;
+            left: 50%;
+            transform: translate3d(-50%, 0, 0);
+            background-position: -10px -375px;
+        }
+        .title-flower-l {
+            position: absolute;
+            width: 230px;
+            height: 200px;
+            left: -80px;
+            top: 86px;
+            background-position: -10px -645px;
+        }
+        .title-flower-r {
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            right: -115px;
+            top: 65px;
+            background-position: -730px -375px;
+        }
         .title {
             width: 338px;
             height: 110px;
             position: absolute;
             left: 50%;
+            top: 50px;
             transform: translate3d(-50%, 0, 0);
             background-position: -280px -160px;
         }
@@ -31,10 +60,106 @@ body, html {
             width: 85px;
             height: 85px;
             left: 50%;
-            top: 14px;
+            top: 64px;
             transform: translate3d(-50%, 0, 0);
             background-position: -280px -280px;
             position: absolute;
+        }
+        .title-text2 {
+            position: absolute;
+            width: 260px;
+            height: 50px;
+            left: 50%;
+            top: 148px;
+            transform: translate3d(-50%, 0, 0);
+            background-position: -280px -100px;
+        }
+        .title-description {
+            position: absolute;
+            width: 260px;
+            height: 35px;
+            left: 50%;
+            top: 196px;
+            background-position: -280px -55px;
+            transform: translate3d(-50%, 0, 0);
+        }
+    }
+    .bowl-container {
+        text-align: center;
+        margin-top: 30px;
+        .bowl {
+            width: 260px;
+            height: 215px;
+            position: relative;
+            background-position: -10px -10px;
+            .dice {
+                width: 35px;
+                height: 35px;
+                position: absolute;
+                &.dice1 {
+                    background-position: -280px -10px;
+                }
+                &.dice2 {
+                    background-position: -325px -10px;
+                }
+                &.dice3 {
+                    background-position: -370px -10px;
+                }
+                &.dice4 {
+                    background-position: -415px -10px;
+                }
+                &.dice5 {
+                    background-position: -460px -10px;
+                }
+                &.dice6 {
+                    background-position: -505px -10px;
+                }
+                &.dice-postion1 {
+                    top: 90px;
+                    left: 80px;
+                }
+                &.dice-postion2 {
+                    top: 72px;
+                    left: 118px;
+                }
+                &.dice-postion3 {
+                    top: 88px;
+                    left: 160px;
+                }
+                &.dice-postion4 {
+                    top: 122px;
+                    left: 160px;
+                }
+                &.dice-postion5 {
+                    top: 142px;
+                    left: 118px;
+                }
+                &.dice-postion6 {
+                    top: 122px;
+                    left: 80px;
+                }
+                &.dice-postion7 {
+                    top: 108px;
+                    left: 118px;
+                }
+            }
+        }
+    }
+    .button-container {
+        margin-top: 30px;
+        text-align: center;
+        .button {
+            width: 195px;
+            height: 60px;
+            display: inline-block;
+            &.button-start {
+                background-position: -10px -305px;
+            }
+            &.button-start {
+                &:active {
+                    background-position: -10px -235px;
+                }
+            }
         }
     }
 }

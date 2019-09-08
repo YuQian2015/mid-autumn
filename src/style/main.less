@@ -1,0 +1,40 @@
+body, html {
+    margin: 0;
+    height: 100%;
+}
+
+.background {
+    height: 100%;
+    background: url(../image/bg1.jpg) no-repeat;
+    background-size: cover;
+}
+
+.sprite {
+    background: url(../image/sprite.png) no-repeat;
+    background-size: 1000px 1000px;
+}
+
+.container {
+    overflow: hidden;
+    .title-container {
+        position: relative;
+        margin: 50px;
+        .title {
+            width: 338px;
+            height: 110px;
+            position: absolute;
+            left: 50%;
+            transform: translate3d(-50%, 0, 0);
+            background-position: -280px -160px;
+        }
+        .title-text {
+            width: 85px;
+            height: 85px;
+            left: 50%;
+            top: 14px;
+            transform: translate3d(-50%, 0, 0);
+            background-position: -280px -280px;
+            position: absolute;
+        }
+    }
+}

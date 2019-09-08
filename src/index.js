@@ -1,1 +1,1 @@
-alert(12313213)
+import './style/main.less';

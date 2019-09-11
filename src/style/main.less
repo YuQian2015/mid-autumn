@@ -1,7 +1,5 @@
-body, html {
-    margin: 0;
-    height: 100%;
-}
+@import './animation.less';
+@import './reset.less';
 
 .inline {
     display: inline-block;
@@ -93,6 +91,7 @@ body, html {
             position: relative;
             background-position: -10px -10px;
             .dice {
+                display: none;
                 width: 35px;
                 height: 35px;
                 position: absolute;
@@ -114,33 +113,59 @@ body, html {
                 &.dice6 {
                     background-position: -505px -10px;
                 }
-                &.dice-postion1 {
+                &.dice-position1 {
                     top: 90px;
                     left: 80px;
                 }
-                &.dice-postion2 {
+                &.dice-position2 {
                     top: 72px;
                     left: 118px;
                 }
-                &.dice-postion3 {
+                &.dice-position3 {
                     top: 88px;
                     left: 160px;
                 }
-                &.dice-postion4 {
+                &.dice-position4 {
                     top: 122px;
                     left: 160px;
                 }
-                &.dice-postion5 {
+                &.dice-position5 {
                     top: 142px;
                     left: 118px;
                 }
-                &.dice-postion6 {
+                &.dice-position6 {
                     top: 122px;
                     left: 80px;
                 }
-                &.dice-postion7 {
+                &.dice-position7 {
                     top: 108px;
                     left: 118px;
+                }
+            }
+            &.active {
+                .dice {
+                    display: block;
+                    &.dice-position1 {
+                        animation: diceAnimation 1s cubic-bezier(0.39, 0.12, 0.85, 0.48);
+                    }
+                    &.dice-position2 {
+                        animation: diceAnimation2 800ms cubic-bezier(0.39, 0.12, 0.85, 0.48);
+                    }
+                    &.dice-position3 {
+                        animation: diceAnimation3 600ms cubic-bezier(0.39, 0.12, 0.85, 0.48);
+                    }
+                    &.dice-position4 {
+                        animation: diceAnimation 750ms cubic-bezier(0.39, 0.12, 0.85, 0.48);
+                    }
+                    &.dice-position5 {
+                        animation: diceAnimation2 500ms cubic-bezier(0.39, 0.12, 0.85, 0.48);
+                    }
+                    &.dice-position6 {
+                        animation: diceAnimation3 678ms cubic-bezier(0.39, 0.12, 0.85, 0.48);
+                    }
+                    &.dice-position7 {
+                        animation: diceAnimation3 678ms cubic-bezier(0.39, 0.12, 0.85, 0.48);
+                    }
                 }
             }
         }

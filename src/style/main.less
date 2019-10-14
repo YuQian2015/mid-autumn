@@ -1,3 +1,4 @@
+@import './mixin.less';
 @import './animation.less';
 @import './reset.less';
 
@@ -24,9 +25,7 @@
         .title-moon {
             width: 260px;
             height: 260px;
-            position: absolute;
-            left: 50%;
-            transform: translate3d(-50%, 0, 0);
+            .hCenter;
             background-position: -10px -375px;
         }
         .title-flower-l {
@@ -48,38 +47,30 @@
         .title {
             width: 338px;
             height: 110px;
-            position: absolute;
-            left: 50%;
             top: 50px;
-            transform: translate3d(-50%, 0, 0);
+            .hCenter;
             background-position: -280px -160px;
         }
         .title-text {
             width: 85px;
             height: 85px;
-            left: 50%;
             top: 64px;
-            transform: translate3d(-50%, 0, 0);
+            .hCenter;
             background-position: -280px -280px;
-            position: absolute;
         }
         .title-text2 {
-            position: absolute;
             width: 260px;
             height: 50px;
-            left: 50%;
             top: 148px;
-            transform: translate3d(-50%, 0, 0);
+            .hCenter;
             background-position: -280px -100px;
         }
         .title-description {
-            position: absolute;
             width: 260px;
             height: 35px;
-            left: 50%;
             top: 196px;
+            .hCenter;
             background-position: -280px -55px;
-            transform: translate3d(-50%, 0, 0);
         }
     }
     .bowl-container {
@@ -114,32 +105,25 @@
                     background-position: -505px -10px;
                 }
                 &.dice-position1 {
-                    top: 90px;
-                    left: 80px;
+                    .position(90px, 80px);
                 }
                 &.dice-position2 {
-                    top: 72px;
-                    left: 118px;
+                    .position(72px, 118px);
                 }
                 &.dice-position3 {
-                    top: 88px;
-                    left: 160px;
+                    .position(88px, 160px);
                 }
                 &.dice-position4 {
-                    top: 122px;
-                    left: 160px;
+                    .position(122px, 160px);
                 }
                 &.dice-position5 {
-                    top: 142px;
-                    left: 118px;
+                    .position(142px, 118px);
                 }
                 &.dice-position6 {
-                    top: 122px;
-                    left: 80px;
+                    .position(122px, 80px);
                 }
                 &.dice-position7 {
-                    top: 108px;
-                    left: 118px;
+                    .position(108px, 118px);
                 }
             }
             &.active {
@@ -164,7 +148,7 @@
                         animation: diceAnimation3 678ms cubic-bezier(0.39, 0.12, 0.85, 0.48);
                     }
                     &.dice-position7 {
-                        animation: diceAnimation3 678ms cubic-bezier(0.39, 0.12, 0.85, 0.48);
+                        animation: diceAnimation3 800ms cubic-bezier(0.39, 0.12, 0.85, 0.48);
                     }
                 }
             }

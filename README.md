@@ -4,11 +4,11 @@
 
 扫描二维码查看
 
-![1571058059](http://res.moyufed.com/mid-autumn/preview.png)
+![预览](src/image/preview.png)
 
 
 
-### 启动
+### 使用
 
 #### 下载项目
 
@@ -16,7 +16,7 @@
 $ git clone https://github.com/YuQian2015/mid-autumn.git
 ```
 
-#### 启动dev，开发
+#### 启动开发
 
 ```powershell
 $ cd mid-autumn
@@ -27,7 +27,7 @@ $ npm start
 
 ```
 
-#### build
+#### 编译打包
 
 ```powershell
 $ npm run build

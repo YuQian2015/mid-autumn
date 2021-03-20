@@ -1,3 +1,4 @@
+import { MidAutumn } from './common';
 import './style/main.less';
 
 import $ from "jquery";
@@ -8,16 +9,18 @@ class Game {
     result = [];
     position = [];
 
+    midAutumn = new MidAutumn({
+        onChange: result => {
+            this.result = result;
+        }
+    });
 
     start() {
         this.result.length = 0;
-        this.getPoint();
-    }
-
-    getPoint() {
-        for (let i = 0; i < 6; i++) {
-            this.result.push(Math.floor(Math.random() * 6) + 1)
-        }
+        // this.midAutumn.start();
+        this.midAutumn.setResult([4,4,4,4,1,1]);
+        console.log(this.midAutumn.getAward());
+        
         this.setDice();
     }
 

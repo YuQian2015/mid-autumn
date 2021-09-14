@@ -9,25 +9,19 @@ class Game {
     result = [];
     position = [];
 
-    midAutumn = new MidAutumn({
-        onChange: result => {
-            this.result = result;
-        }
-    });
+    midAutumn = new MidAutumn();
 
     start() {
-        this.result.length = 0;
-        // this.midAutumn.start();
-        this.midAutumn.setResult([4,4,4,4,1,1]);
+        this.result = this.midAutumn.start();
+        // this.result = this.midAutumn.setResult([4, 4, 4, 4, 1, 1]).getResult();
         console.log(this.midAutumn.getAward());
-        
         this.setDice();
     }
 
     getPosition() {
         let position = []
-        this.position = [1,2,3,4,5,6,7];
-        for( let i = 0; i < 6; i++) {
+        this.position = [1, 2, 3, 4, 5, 6, 7];
+        for (let i = 0; i < 6; i++) {
             position.push(this.position.splice(Math.floor(Math.random() * this.position.length), 1)[0])
         }
         return position;
@@ -38,7 +32,7 @@ class Game {
         const position = this.getPosition();
         $.each($("#bowl .dice"), (index, item) => {
             $(item).removeClass();
-            $(item).addClass(`sprite dice dice${this.result[index]} dice-position${position[index]}` )
+            $(item).addClass(`sprite dice dice${this.result[index]} dice-position${position[index]}`)
         })
         setTimeout(() => {
             $("#bowl").addClass('active');
